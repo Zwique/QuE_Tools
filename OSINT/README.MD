@@ -1,6 +1,6 @@
-# 🔍 qOSINT
+# 🔍 OSINT
 
-**qOSINT** is a curated list of Open Source Intelligence (OSINT) tools and resources I regularly use during Capture the Flag (CTF) competitions and cybersecurity challenges. These tools help identify social profiles, analyze metadata, perform reverse image searches, and more.
+**OSINT** is a curated list of Open Source Intelligence (OSINT) tools and resources I regularly use during Capture the Flag (CTF) competitions and cybersecurity challenges. These tools help identify social profiles, analyze metadata, perform reverse image searches, and more.
 
 Whether you're new to OSINT or a seasoned CTF player, this list can serve as a reference toolkit for solving real-world reconnaissance problems.
 
