@@ -4,15 +4,14 @@ Welcome to my curated collection of tools used during Capture The Flag (CTF) com
 
 CTFs are a fantastic way to practice and improve cybersecurity skills in a practical, hands-on environment. Having the right tools can make a huge difference in efficiency and success. This repository is intended to be a comprehensive and organized reference for both newcomers and seasoned players who want quick access to reliable tools for each category.
 
-## What You’ll Find Here
+## 📁 Categories
 
-- **Machine**: Tools for exploiting and interacting with vulnerable machines  
-- **Cryptography**: Utilities for encrypting, decrypting, and analyzing ciphers  
-- **Reverse Engineering & Forensics**: Frameworks for binary and malware analysis, along with tools for file, memory, and network investigation  
-- **Web**: Scanners and proxies used to discover and exploit web vulnerabilities  
-- **OSINT**: Resources for reconnaissance and open-source information gathering  
-- **PWN**: Exploitation tools and techniques for binary-based challenges  
-
+- [🖥️ Machine](#️machine)
+- [🔐 Cryptography](#cryptography)
+- [🔎 Reverse Engineering & Forensics](#reverse-engineering--forensics)
+- [🌐 Web](#web)
+- [🌍 OSINT](#osint)
+- [💣 PWN](#pwn)
 
 ## How to Use This Repo
 
