@@ -10,3 +10,6 @@
 | [volatility3](https://github.com/volatilityfoundation/volatility3) | Memory forensics | `pip install volatility3` |
 | [strings](https://man7.org/linux/man-pages/man1/strings.1.html) | String extractor | Built-in |
 | [ExifTool](https://exiftool.org/) | Metadata analyzer | `sudo apt install exiftool` |
+| [apktool](https://github.com/iBotPeaches/Apktool) | Decompile Android APKs | `sudo apt install apktool` |
+| [jadx](https://github.com/skylot/jadx) | Android APK decompiler (to Java) | `sudo apt install jadx` |
+| [GDB + GEF](https://github.com/hugsy/gef) | GDB Enhanced Features (reverse engineering, exploit dev) | `sudo apt install gdb && bash -c "$(curl -fsSL https://gef.blah.cat/sh)"` |
