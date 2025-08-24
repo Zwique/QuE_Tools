@@ -24,3 +24,4 @@
 | [pwncat](https://github.com/cytopia/pwncat) | Post-exploitation tool | `pip install pwncat` |
 | [chisel](https://github.com/jpillora/chisel) | TCP tunnel over HTTP | Precompiled binary |
 | [sshuttle](https://github.com/sshuttle/sshuttle) | VPN over SSH | `pip install sshuttle` |
+| [Metasploit Framework](https://metasploit.com/) | Exploitation framework | `sudo apt install metasploit-framework` |
