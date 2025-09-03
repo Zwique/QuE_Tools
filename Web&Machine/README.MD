@@ -1,5 +1,5 @@
 
-## 🌐 Web
+## 🌐 Web & 🖥️ Machine
 
 | Tool | Description | Install / URL |
 |------|-------------|--------------------|
@@ -11,11 +11,6 @@
 | [XSStrike](https://github.com/s0md3v/XSStrike) | XSS scanner | `git clone` + `pip install -r requirements.txt` |
 | [Postman](https://www.postman.com/) | API testing | Download |
 | [Cookie-Editor](https://github.com/Moustachauve/cookie-editor) | Cookie manager | Browser extension |
-
-## 🖥️ Machine
-
-| Tool | Description | Install / URL |
-|------|-------------|--------------------|
 | [nmap](https://nmap.org/) | Network scanner | `sudo apt install nmap` |
 | [netcat (nc)](https://man7.org/linux/man-pages/man1/nc.1.html) | Network debugger | `sudo apt install netcat` |
 | [socat](http://www.dest-unreach.org/socat/) | Data relay tool | `sudo apt install socat` |
