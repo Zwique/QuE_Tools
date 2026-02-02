@@ -6,7 +6,7 @@ CTFs are a fantastic way to practice and improve cybersecurity skills in a pract
 
 ## 📁 Categories
 
-- [🔐 Cryptography](#Cryptography)
+- [🔐 Cryptography](https://github.com/Zwique/QuE_Tools/tree/main/Cryptography)
 - [🔎 Reverse Engineering & Forensics](#reverse-engineering--forensics)
 - [🌐 Web & Machine](#web--machine)
 - [🌍 OSINT](#osint)
