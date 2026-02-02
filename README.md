@@ -7,10 +7,10 @@ CTFs are a fantastic way to practice and improve cybersecurity skills in a pract
 ## 📁 Categories
 
 - [🔐 Cryptography](https://github.com/Zwique/QuE_Tools/tree/main/Cryptography)
-- [🔎 Reverse Engineering & Forensics](#reverse-engineering--forensics)
-- [🌐 Web & Machine](#web--machine)
-- [🌍 OSINT](#osint)
-- [💣 PWN](#pwn)
+- [🔎 Reverse Engineering & Forensics](https://github.com/Zwique/QuE_Tools/tree/main/Forensics%3AReversing)
+- [🌐 Web & Machine](https://github.com/Zwique/QuE_Tools/tree/main/Web%26Machine)
+- [🌍 OSINT](https://github.com/Zwique/QuE_Tools/tree/main/OSINT)
+- [💣 PWN](https://github.com/Zwique/QuE_Tools/tree/main/Pwn)
 
 ## How to Use This Repo
 
